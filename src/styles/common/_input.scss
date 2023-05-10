@@ -1,0 +1,17 @@
+input {
+  background: #FFFFFF;
+  border-radius: 100px;
+  border: none;
+  font-weight: $font-weight;
+  appearance: none;
+
+  &::placeholder {
+    color: #979797;
+    font-weight: $font-weight;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

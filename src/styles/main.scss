@@ -1,0 +1,25 @@
+@import '../node_modules/swiper/swiper.scss';
+
+// СТИЛИ НАСТРОЙКИ ПРОЕКТА
+
+@import "./settings/fonts";
+@import "./settings/variables";
+@import "./settings/colors";
+@import "./mixins/breakpoint";
+@import "./mixins/grid";
+@import "./mixins/spacer";
+@import "./mixins/font";
+
+// СТИЛИ НАСТРОЙКИ ПРОЕКТА
+@import "./settings/animation";
+@import "./settings/helpers";
+
+// ОБЩИЕ СТИЛИ
+@import "./common/fonts";
+@import "./common/link";
+@import "./common/buttons";
+@import "./common/input";
+@import "./common/list";
+
+// СТИЛИ КОМПОНЕНТОВ
+@import "../components/components.scss";

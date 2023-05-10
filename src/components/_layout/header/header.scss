@@ -1,0 +1,30 @@
+@import "./search.scss";
+header {
+  transition: .4s;
+  background: var(--color-primary-text);
+
+  nav {
+    height: 46px;
+     a {
+       position: relative;
+      &.active {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: calc(100% + 16px);
+          left: -8px;
+          top: calc(100% + 0px);
+          height: 4px;
+          background: var(--color-green);
+          border-radius: 20px 20px 0px 0px;
+
+          @include media-breakpoint-up(md) {
+            top: calc(100% + 13px);
+          }
+        }
+      }
+    }
+  }
+}
+

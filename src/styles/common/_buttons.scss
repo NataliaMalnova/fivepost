@@ -1,0 +1,122 @@
+.btn {
+    @include font-basic();
+    cursor: pointer;
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+	font-style: $font-style;
+    color: var(--color-primary-text);
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 100px;
+    background: none;
+    border: none;
+    width: max-content;
+    min-height: 40px;
+    min-width: 90px;
+    transition: 0.4s;
+}
+
+.btn-green {
+    background-color : var(--color-green);
+    color: #fff;
+
+    &:hover {
+        background: #50A645;
+        color: #fff;
+    }
+}
+
+.btn-border-green {
+    border: 1px solid #5EBC52;
+    color: #4CA042;
+    @include font-small();
+    font-weight: $font-weight-medium;
+    border-radius: 5px;
+    padding: 16px 25px 16px 20px;
+
+    &:hover {
+        background: #50A645;
+        color: #fff;
+
+        svg path {
+            fill: #fff;
+        }
+    }
+}
+
+.btn-orange {
+    background: #ECA121;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: $font-weight-medium;
+
+    &:hover {
+        background: #ECA121;
+    }
+}
+
+.btn-promo {
+    position: relative;
+    border-radius: 5px 0 0 5px;
+    padding: 17px 58px 17px 26px;
+    transition: .4s;
+
+    svg {
+        position: absolute;
+        right: -1px;
+        top: -1px;
+    }
+
+    &:hover {
+        transition: .4s;
+        padding: 17px 50px 17px 26px;
+    }
+
+    &.active {
+        width: 100%;
+        background: #F5ECDB;
+        border-radius: 5px;
+        color: #F19902;
+        padding: 0;
+        height: 50px;
+        
+        svg {
+            display: none;
+        }
+    }
+}
+
+.btn-discont {
+    border-radius: 5px;
+    padding: 17px 50px;
+}
+
+.btn-grey {
+    background: #DBDBDB;
+    color: #fff;
+}
+
+.btn-past {
+    border-radius: 5px;
+    padding: 17px 45px;
+}
+
+.btn-arrow {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0;
+    border-radius: 5px;
+
+    svg {
+        path{
+            fill: #fff;
+        }
+    }
+}
+
+    .btn-auto {
+        margin: 0 auto;
+    }
+
+

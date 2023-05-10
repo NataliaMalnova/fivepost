@@ -1,0 +1,14 @@
+.tag {
+  border: 1px solid #DBDBDB;
+  border-radius: 100px;
+  padding: 7px 18px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  color: #505256;
+  cursor: pointer;
+
+  &:hover {
+    color: #4CA042;
+    border: 1px solid #5EBC52;
+  }
+}

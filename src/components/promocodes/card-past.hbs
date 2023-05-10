@@ -1,0 +1,29 @@
+<div class="promocode-card past-card d-flex flex-column flex-tb-row align-items-tb-start w-100">
+    <div class="pe-lg-2 pt-1 d-flex align-items-center flex-tb-column">
+        <p class="promocode-card__discont pb-tb-1 me-1 me-tb-0">{{discont}}</p>
+        <p class="promocode-prompt font-little mt-tb-1">Акция</p>
+    </div>
+    <div class="ms-tb-4 w-100 mt-1 mt-sm-2 mt-tb-0">
+        <div class="promocode-card__content d-flex align-items-start align-items-tb-center justify-content-between w-100">
+            <div>
+                <p class="text-large promocode-card__title pe-2">{{title}}</p>
+                <div class="d-flex align-items-center mt-2">
+                    <button class="btn btn-grey btn-arrow me-2 d-sm-none">
+                        {{> _images/arr}}
+                    </button>
+                    <div class="promocode-card__clock d-flex align-items-center">
+                        {{> _images/clock}}
+                        <p class="color-secondary ms-1">
+                            Уже истек
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="promocode-card__button d-none d-sm-block">
+                 <button class="btn btn-grey btn-past mt-1">
+                     Показать промокод
+                 </button>
+            </div>
+        </div>
+    </div>
+</div>

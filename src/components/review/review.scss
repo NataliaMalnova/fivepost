@@ -1,0 +1,44 @@
+.review-like,
+.review-dislike{
+  cursor: pointer;
+  padding: 11px 10px 10px 17px;
+  border-radius: 100px 0 0 100px;
+  border: 1px solid #DBDBDB;
+}
+
+.review-dislike {
+  transform: rotate(180deg);
+  border-right: none;
+}
+
+.review-like {
+  &:hover {
+    svg path {
+      fill:  #5EBC52;
+    }
+  }
+}
+
+.review-like.active {
+  background:  #5EBC52;
+  border: 1px solid #5EBC52;
+  svg path {
+    fill: #fff;
+  }
+}
+
+.review-dislike {
+  &:hover {
+    svg path {
+      fill: #E43E44;
+    }
+  }
+}
+
+.review-dislike.active {
+  background: #E43E44;
+  border: 1px solid #E43E44;
+  svg path {
+    fill:  #fff;
+  }
+}

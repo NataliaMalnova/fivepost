@@ -1,0 +1,221 @@
+@each $value, $media  in $grid-breakpoints {
+  @if $media == 0  {
+    .d-none {
+      display: none !important;
+    }
+    .d-block {
+      display: block !important;
+    }
+    .d-flex {
+      display: flex !important;
+    }
+    .d-inline {
+      display: inline !important;
+    }
+    .d-inline-block {
+      display: inline-block !important;
+    }
+  } @else {
+    @media screen and (min-width: $media) {
+      .d-#{$value}-none {
+        display: none !important;
+      }
+      .d-#{$value}-block {
+        display: block !important;
+      }
+      .d-#{$value}-flex {
+        display: flex !important;
+      }
+      .d-#{$value}-inline {
+        display: inline !important;
+      }
+      .d-#{$value}-inline-block {
+        display: inline-block !important;
+      }
+    }
+  }
+}
+
+@each $value, $media  in $grid-breakpoints {
+  @if $media == 0  {
+    .align-items {
+      &-center {
+        align-items: center !important;
+      }
+      &-start {
+        align-items: flex-start !important;
+      }
+      &-end {
+        align-items: flex-end !important;
+      }
+    }
+
+  } @else {
+    @media screen and (min-width: $media) {
+      .align-items-#{$value} {
+        &-center {
+          align-items: center !important;
+        }
+
+        &-start {
+          align-items: flex-start !important;
+        }
+
+        &-end {
+          align-items: flex-end !important;
+        }
+      }
+    }
+  }
+}
+
+@each $value, $media  in $grid-breakpoints {
+  @if $media == 0  {
+    .justify-content {
+      &-center {
+        justify-content: center !important;
+      }
+      &-start {
+        justify-content: flex-start !important;
+      }
+      &-end {
+        justify-content: flex-end !important;
+      }
+
+      &-between {
+        justify-content: space-between !important;
+      }
+      &-around {
+        justify-content: space-around !important;
+      }
+    }
+  } @else {
+    @media screen and (min-width: $media) {
+      .justify-content-#{$value} {
+        &-center {
+          justify-content: center !important;
+        }
+        &-start {
+          justify-content: flex-start !important;
+        }
+        &-end {
+          justify-content: flex-end !important;
+        }
+
+        &-between {
+          justify-content: space-between !important;
+        }
+        &-around {
+          justify-content: space-around !important;
+        }
+      }
+    }
+  }
+}
+
+@each $value, $media  in $grid-breakpoints {
+  @if $media == 0  {
+    .flex-column {
+     flex-direction: column !important;
+    }
+
+    .flex-row {
+      flex-direction: row !important;
+    }
+
+    .flex-row-reverse {
+      flex-direction: row-reverse !important;
+    }
+  } @else {
+    @media screen and (min-width: $media) {
+      .flex-#{$value}-column {
+        flex-direction: column !important;
+      }
+
+      .flex-#{$value}-row {
+        flex-direction: row !important;
+      }
+
+      .flex-#{$value}-row-reverse {
+        flex-direction: row-reverse !important;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+
+  @each $value, $media  in $grid-breakpoints {
+    @media screen and (min-width: $media) {
+      @each $widths, $widths_media  in $container-max-widths {
+        @if $value == $widths  {
+          max-width: $widths_media;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: calc($grid-gutter-width / -2);
+  margin-left: calc($grid-gutter-width / -2);
+  width: calc(100% + $grid-gutter-width);
+}
+
+@each $column_value in $grid-column {
+    .col-#{$column_value} {
+      box-sizing: border-box;
+      -ms-flex: 0 0 auto;
+      -webkit-box-flex: 0;
+      flex: 0 0 auto;
+      display: flex;
+    }
+}
+
+@each $value, $media in $grid-breakpoints {
+  @each $column_value in $grid-column {
+    @if $media == 0  {
+      .col-#{$column_value} {
+        padding-right: calc($grid-gutter-width / 2);
+        padding-left: calc($grid-gutter-width / 2);
+        -ms-flex-preferred-size: calc(100% / 12 * $column_value );
+        flex-basis: calc(100% / 12 * $column_value );
+        max-width: calc(100% / 12 * $column_value );
+      }
+    }
+    @else {
+      @media screen and (min-width: $media) {
+        .col-#{$value}-#{$column_value} {
+          padding-right: calc($grid-gutter-width / 2);
+          padding-left: calc($grid-gutter-width / 2);
+          -ms-flex-preferred-size: calc(100% / 12 * $column_value );
+          flex-basis: calc(100% / 12 * $column_value );
+          max-width: calc(100% / 12 * $column_value );
+        }
+      }
+    }
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-shrink {
+  flex-shrink: 0;
+}
+
+
+

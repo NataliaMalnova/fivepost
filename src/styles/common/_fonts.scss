@@ -1,0 +1,112 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: $font-weight;
+	font-style: $font-style;
+    color: var(--color-primary-text);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color:#fff;
+}
+
+h6, h5, h4, h3, h2, h1 {
+    font-family: $font-secondary;
+    font-weight: $font-weight-demi;
+}
+
+p, a, label, input, span, li, ol, ul {
+    font-family: $font-primary;
+    font-weight: $font-weight;
+}
+
+h1 {
+    @include font-h1();
+}
+
+h2 {
+    @include font-h2();
+}
+
+h3 {
+    @include font-h3();
+}
+
+label, p, li, input, a {
+    @include font-basic();
+}
+
+.text-small {
+    @include font-small();
+}
+
+.text-primary {
+    @include font-primary();
+}
+
+.text {
+    @include font-text();
+}
+
+.text-little {
+    @include font-little();
+}
+
+.text-large {
+    @include font-large();
+}
+
+.font-weight {
+    font-weight: $font-weight !important;
+}
+
+.font-medium {
+    font-weight: $font-weight-medium !important;
+}
+
+.font-light {
+    font-weight: $font-weight-light !important;
+}
+
+.color-primary {
+    color: var(--color-primary-text) !important;
+}
+
+.color-dark {
+    color: var(--color-dark) !important;
+}
+
+.color-light {
+    color: var(--color-light) !important;
+}
+
+
+
+.color-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.color-grey {
+    color: var(--color-grey) !important;
+}
+
+.color-light {
+    color: var(--color-light) !important;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.color-white {
+    color: #FFFFFF !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}

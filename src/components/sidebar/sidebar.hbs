@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <img src="./assets/img/asos.svg" alt="asos">
+    {{> star/stars}}
+    <p class="mt-2 pt-1 color-dark sidebar-content">Asos — британский онлайн-магазин одежды и косметики. Компания была основана в 2000 году в Лондоне и в первую очередь была ориентирована на молодежь. Веб-сайт продает более 850 брендов, а также свой собственный ассортимент одежды и аксессуаров.</p>
+    <button class="btn btn-border-green mt-3 d-flex align-items-center">
+        <div class="me-1 pe-1">
+            {{> _images/plus}}
+        </div>
+        Добавить промокод
+    </button>
+    <p class="sidebar-title font-medium mt-3 pt-3">Похожие магазины</p>
+    <div class="d-flex flex-wrap mt-2">
+        {{> tag/tag title="Wildberries"}}
+        {{> tag/tag title="Lacoste"}}
+        {{> tag/tag title="GAP"}}
+        {{> tag/tag title="Finn Flare"}}
+        {{> tag/tag title="Ostin"}}
+        {{> tag/tag title="Next"}}
+        {{> tag/tag title="Bonprix"}}
+        {{> tag/tag title="Yoox"}}
+    </div>
+</div>

@@ -1,0 +1,119 @@
+@each $value, $media  in $grid-breakpoints {
+  @if $media == 0  {
+    .mt{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          margin-top: $spacer !important;
+        }
+      }
+    }
+    .mb{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          margin-bottom: $spacer !important;
+        }
+      }
+    }
+    .ms{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          margin-left: $spacer !important;
+        }
+      }
+    }
+    .me{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          margin-right: $spacer !important;
+        }
+      }
+    }
+    .pt{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          padding-top: $spacer !important;
+        }
+      }
+    }
+    .pb{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          padding-bottom: $spacer !important;
+        }
+      }
+    }
+    .ps{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          padding-left: $spacer !important;
+        }
+      }
+    }
+    .pe{
+      @each $step, $spacer in $spacers {
+        &-#{$step} {
+          padding-right: $spacer !important;
+        }
+      }
+    }
+  } @else {
+    @media screen and (min-width: $media) {
+      .mt-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            margin-top: $spacer !important;
+          }
+        }
+      }
+      .mb-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            margin-bottom: $spacer !important;
+          }
+        }
+      }
+      .ms-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            margin-left: $spacer !important;
+          }
+        }
+      }
+      .me-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            margin-right: $spacer !important;
+          }
+        }
+      }
+      .pt-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            padding-top: $spacer !important;
+          }
+        }
+      }
+      .pb-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            padding-bottom: $spacer !important;
+          }
+        }
+      }
+      .ps-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            padding-left: $spacer !important;
+          }
+        }
+      }
+      .pe-#{$value} {
+        @each $step, $spacer in $spacers{
+          &-#{$step} {
+            padding-right: $spacer !important;
+          }
+        }
+      }
+    }
+  }
+}

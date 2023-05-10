@@ -1,0 +1,46 @@
+<div class="promocode-card d-flex flex-column flex-tb-row align-items-tb-start w-100">
+    <div class="pe-lg-2 pt-1 d-flex align-items-center flex-tb-column">
+        <p class="promocode-card__discont pb-tb-1 me-1 me-tb-0">{{discont}}</p>
+        <p class="promocode-prompt font-little mt-tb-1">Промокод</p>
+    </div>
+    <div class="ms-tb-4 w-100 mt-1 mt-sm-2 mt-tb-0 js--show-more">
+        <div class="promocode-card__content d-flex align-items-start align-items-tb-center justify-content-between w-100">
+            <div>
+                <p class="text-large color-secondary promocode-card__title pe-2">{{title}}</p>
+                <div class="d-flex align-items-center mt-2">
+                    <button class="btn btn-orange btn-arrow me-2 d-sm-none">
+                        {{> _images/arr}}
+                    </button>
+                    <div class="promocode-card__clock d-flex align-items-center">
+                        {{> _images/clock}}
+                        <p class="color-secondary ms-1">
+                            <span class="color-secondary font-light d-none d-tb-inline">Истекает</span>
+                            20 мая 2023
+                        </p>
+                    </div>
+                    {{#if detail}}
+                        <div class="promocode-card__detail ms-2 ms-md-4 d-flex align-items-center js--show-more-btn">
+                            {{> _images/arr}}
+                            <p class="color-secondary ms-1">Показать <span class="color-secondary font-light d-none d-sm-inline">детали</span></p>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="promocode-card__button d-none d-sm-flex flex-shrink">
+                 <button class="btn btn-orange btn-promo mt-1 js--promo-btn">
+                     <span class="js--promo-text">Показать промокод</span>
+                     <span class="js--promo d-none">RTYQWE</span>
+
+                    {{> _images/btn}}
+                 </button>
+            </div>
+        </div>
+        {{#if detail}}
+            <div class="show-more js--show-more-content">
+                <p class="mt-2 mt-md-3  ">Asos — британский онлайн-магазин одежды и косметики. Компания была основана в 2000 году в Лондоне и в первую очередь была ориентирована на молодежь. Веб-сайт продает более 850 брендов, а также свой собственный ассортимент одежды и аксессуаров.</p>
+            </div>
+
+        {{/if}}
+
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.header-input {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 580px;
+  }
+
+  @include media-breakpoint-up(tb) {
+    width: 800px;
+  }
+
+  &__search {
+    position: absolute;
+    left: 19px;
+    width: 16px;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  input {
+    padding: 15px 100px 15px 47px;
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.input-datalist__list {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 50px rgba(165, 165, 165, 0.7);
+  border-radius: 20px;
+  list-style-type: none;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  width: calc(100% - 1px);
+  top: calc(100% + 27px);
+
+  li {
+    padding: 16px 23px;
+    font-weight: $font-weight;
+
+    &:hover {
+      background: #EFEFEF;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.coupons-table {
+  border: 1px solid #DBDBDB;
+  border-radius: 10px;
+
+  &__title {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 27px 44px;
+
+    @include media-breakpoint-down(md) {
+      padding: 24px;
+    }
+  }
+
+  &__content {
+    padding: 40px 44px;
+    @include media-breakpoint-down(md) {
+      padding: 24px;
+    }
+  }
+}

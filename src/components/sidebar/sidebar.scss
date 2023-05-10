@@ -1,0 +1,28 @@
+.sidebar-srapper {
+
+}
+.sidebar {
+  max-width: 250px;
+  position: sticky;
+  top: 40px;
+  height: max-content;
+
+  img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-up(tb) {
+    max-width: 311px;
+  }
+
+  p.sidebar-content {
+    line-height: 20px;
+  }
+
+  &-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

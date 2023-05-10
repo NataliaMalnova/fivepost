@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TT Rounds Neue';
+    src: local('TT Rounds Neue Demi Bold'), local('TT-Rounds-Neue-Demi-Bold'),
+        url('TTRoundsNeue-DemiBold.woff2') format('woff2'),
+        url('TTRoundsNeue-DemiBold.woff') format('woff'),
+        url('TTRoundsNeue-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }

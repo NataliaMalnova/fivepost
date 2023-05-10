@@ -1,0 +1,40 @@
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'TT Rounds Neue', sans-serif;
+
+$font-weight: 400;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-demi: 600;
+
+$font-style: normal;
+
+$spacers: (
+        0: 0,
+        1: 6px,
+        2: 17px,
+        3: 30px,
+        4: 40px,
+        5: 100px
+);
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 768px,
+        md: 991px,
+        tb: 1280px,
+        lg: 1648px,
+        xl: 1920px
+);
+
+$container-max-widths: (
+        sm: 864px,
+        md: 990px,
+        tb: 1264px,
+        lg: 1648px,
+);
+
+$grid-column: (2, 3, 4, 6, 7, 8, 9, 12);
+
+$grid-gutter-width: 24px;
+
+

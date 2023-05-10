@@ -1,0 +1,17 @@
+footer {
+  background: var(--color-primary-text);
+
+
+  a {
+      text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    line-height: 20px;
+  }
+
+}

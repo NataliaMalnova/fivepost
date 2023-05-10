@@ -1,0 +1,19 @@
+<header class="pt-2 pb-2 w-100">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center h-100">
+            <a href="/" class="header-logo d-block svg-block">
+                {{> _images/logo}}
+            </a>
+            <div class="d-none d-sm-block">
+                {{> _layout/header/header-search}}
+            </div>
+            <nav class="d-flex align-items-center">
+                <a href="/shop.html" class="active d-flex align-items-center h-100 me-2 me-tb-4 font-primary color-white">Магазины</a>
+                <a href="/" class="d-flex align-items-center h-100 font-primary color-white ms-md-2 ms-tb-4">Топ купонов</a>
+            </nav>
+        </div>
+        <div class="d-sm-none mt-2 mt-sm-3">
+            {{> _layout/header/header-search}}
+        </div>
+    </div>
+</header>
