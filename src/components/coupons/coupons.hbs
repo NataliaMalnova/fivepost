@@ -1,72 +1,18 @@
-<div class="coupons-table w-100">
-    <div class="coupons-table__title w-100 d-none d-sm-flex">
-        <div class="row w-100">
-            <div class="col-md-2 col-3">
-                <p class="text-primary font-medium color-secondary">Тип купона</p>
-            </div>
-            <div class="col-6 col-md-7">
-                <p class="text-primary font-medium color-secondary">Описание</p>
-            </div>
-            <div class="col-3">
-                <p class="text-primary font-medium color-secondary">Дата окончания</p>
-            </div>
-        </div>
-    </div>
-    <div class="coupons-table__content w-100">
-        <div class="row w-100 align-items-center">
-            <div class="col-md-2 col-sm-3 col-12">
-                <p class="promocode-prompt font-little">Промокод</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-7 mt-1 mb-1 mt-sm-0 mb-sm-0">
-                <p class="color-secondary font-weight">Скидка в 1000 рублей на покупки WQW</p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p class="color-secondary">Истекает 16 января 2023</p>
-            </div>
-        </div>
-        <div class="row w-100 align-items-center mt-4">
-            <div class="col-md-2 col-sm-3 col-12">
-                <p class="promotion-prompt font-little mt-md-1">Акция</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-7 mt-1 mb-1 mt-sm-0 mb-sm-0">
-                <p class="color-secondary font-weight">До 60% скидки на новинки брендовой женской одежды</p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p class="color-secondary">Истекает 16 января 2023</p>
-            </div>
-        </div>
-        <div class="row w-100 align-items-center mt-4">
-            <div class="col-md-2 col-sm-3 col-12">
-                <p class="promotion-prompt font-little mt-md-1">Акция</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-7 mt-1 mb-1 mt-sm-0 mb-sm-0">
-                <p class="color-secondary font-weight">Модная брендовая женская обувь UGG и Lost Ink всего от 3000 руб.</p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p class="color-secondary">Истекает 16 января 2023</p>
-            </div>
-        </div>
-        <div class="row w-100 align-items-center mt-4">
-            <div class="col-md-2 col-sm-3 col-12">
-                <p class="promotion-prompt font-little mt-md-1">Акция</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-7 mt-1 mb-1 mt-sm-0 mb-sm-0">
-                <p class="color-secondary font-weight">Стильные кроссовки Adidas, New Balance, Reebok, Nike со скидкой до 50%</p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p class="color-secondary">Истекает 16 января 2023</p>
-            </div>
-        </div>
-        <div class="row w-100 align-items-center mt-4">
-            <div class="col-md-2 col-sm-3 col-12">
-                <p class="promotion-prompt font-little mt-md-1">Акция</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-7 mt-1 mb-1 mt-sm-0 mb-sm-0">
-                <p class="color-secondary font-weight">Стильные одежда для мужчин: скидки до 50%</p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p class="color-secondary">Истекает 16 января 2023</p>
-            </div>
-        </div>
-    </div>
+<div class="coupons-table">
+    <table class="w-100">
+        <thead class="w-100">
+            <tr class="w-100">
+                <th class="coupons-table--col coupons-table__title"><p class="text-primary font-medium color-secondary">Тип купона</p></th>
+                <th class="coupons-table--col coupons-table__title"><p class="text-primary font-medium color-secondary">Описание</p></th>
+                <th class="coupons-table--col coupons-table__title"><p class="text-primary font-medium color-secondary">Дата окончания</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{> coupons/coupons-row text="Скидка в 1000 рублей на покупки WQW" promo=true}}
+            {{> coupons/coupons-row text="До 60% скидки на новинки брендовой женской одежды"}}
+            {{> coupons/coupons-row text="Модная брендовая женская обувь UGG и Lost Ink всего от 3000 руб."}}
+            {{> coupons/coupons-row text="Стильные кроссовки Adidas, New Balance, Reebok, Nike со скидкой до 50%"}}
+            {{> coupons/coupons-row text="Стильные одежда для мужчин: скидки до 50%"}}
+        </tbody>
+    </table>
 </div>

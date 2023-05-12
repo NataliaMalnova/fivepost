@@ -1,9 +1,9 @@
 <div class="promocodes w-100 js--filter">
-    <div class="d-flex align-items-center justify-content-between">
-        <div class="promocodes-filter d-flex align-items-center">
-            <p class="active text-primary color-secondary d-flex justify-content-center js--filter-btn" data-filter="all">Все <span>4</span></p>
-            <p class="text-primary color-secondary d-flex justify-content-center js--filter-btn" data-filter="promo">Промокоды <span>2</span></p>
-            <p class="text-primary color-secondary d-flex justify-content-center js--filter-btn" data-filter="stock">Акции <span>2</span></p>
+    <div class="d-flex justify-content-between">
+        <div class="promocodes-filter d-flex">
+            <p class="active text-primary color-secondary d-flex justify-content-center js--filter-btn" data-filter="all">Все <span>7</span></p>
+            <p class="text-primary color-secondary d-flex justify-content-center js--filter-btn" data-filter="promo">Промокоды <span>4</span></p>
+            <p class="text-primary color-secondary d-flex justify-content-center js--filter-btn" data-filter="stock">Акции <span>3</span></p>
         </div>
         <p class="d-none d-sm-inline">4 актуальных предложения на июнь 2023</p>
     </div>
@@ -14,11 +14,20 @@
         <div class="promocodes-row mt-sm-2 js--filter-content" data-filter="promo">
             {{> promocodes/card-promocode discont="20%" title="Экстра дисконт 25% на платья из аутлета" }}
         </div>
+        <div class="promocodes-row mt-sm-2 js--filter-content" data-filter="promo">
+            {{> promocodes/card-promocode discont="1000" title="Экстра дисконт 25% на платья из аутлета" rub=true }}
+        </div>
+        <div class="promocodes-row mt-sm-2 js--filter-content" data-filter="promo">
+            {{> promocodes/card-promocode discont="1000" title="Экстра дисконт 25% на платья из аутлета" image=true }}
+        </div>
         <div class="promocodes-row mt-sm-2 js--filter-content" data-filter="stock">
             {{> promocodes/card-promotion discont="80%" title="Скидка 1000 руб. в магазине ASOS"}}
         </div>
         <div class="promocodes-row mt-sm-2 js--filter-content" data-filter="stock">
             {{> promocodes/card-promotion discont="60%" title="Минус до 60% на все товары в Черную Пятницу"}}
+        </div>
+        <div class="promocodes-row mt-sm-2 js--filter-content" data-filter="stock">
+            {{> promocodes/card-promotion discont="60%" title="Минус до 60% на все товары в Черную Пятницу" image=true}}
         </div>
     </div>
 

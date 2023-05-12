@@ -12,6 +12,7 @@ import {filterPromocodes, showPromo, showMore} from "../components/promocodes/pr
 window.addEventListener('load', () => {
     scrolling();
     header.changeDatalist();
+    header.showSearchMobile();
     changeShopBorder();
     changeReview();
     showModal();

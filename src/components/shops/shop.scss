@@ -54,7 +54,7 @@
   margin-right: 0;
 }
 .shop-col:not(:nth-child(2n)) {
-  @include media-breakpoint-only(sm) {
+  @include media-breakpoint-between(xs, md) {
     border-right: 1px solid #DBDBDB;
   }
 }
@@ -70,17 +70,9 @@
   }
 }
 
-.shop-col {
-  padding: 32px;
-
-  @include media-breakpoint-up(lg) {
-    padding: 65px 50px;
-  }
-
-  .promocode-card__title {
-    @include media-breakpoint-only(tb) {
-      min-height: 72px;
-    }
+.shops-best .shop-col:not(:nth-child(2n)) {
+  @include media-breakpoint-only(xs) {
+    border-right: none;
   }
 }
 

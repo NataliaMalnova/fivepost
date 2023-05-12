@@ -17,7 +17,6 @@ const changeShopBorder = () => {
 }
 
 const changeBottomBorder = (items) => {
-
     items.forEach(elem => {
         elem.style.borderBottom = '1px solid #DBDBDB'
     })
@@ -25,7 +24,7 @@ const changeBottomBorder = (items) => {
         removeBorder(items, 4);
     else if(window.innerWidth >= 991)
         removeBorder(items, 3);
-    else if(window.innerWidth >= 768)
+    else if(window.innerWidth >= 768 || items[0].classList.contains('js--shop-item-2'))
         removeBorder(items, 2);
     else
         removeBorder(items, 1);

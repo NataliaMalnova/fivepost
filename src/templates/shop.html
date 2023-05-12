@@ -7,13 +7,13 @@
 {{> _layout/header/header}}
 <main>
     <div class="container">
-        <div class="mt-4 pt-4">
+        <div class="mt-3 mt-md-4 pt-md-4">
              {{> slider/slider}}
         </div>
-        <div class="mt-5">
-            <h2 class="pb-1">Лучшие промокоды</h2>
+        <div class="mt-3 mt-md-5">
+            <h2 class="pb-md-1">Лучшие промокоды</h2>
         </div>
-        <div class="row shops d-flex flex-wrap mt-4 w-100 js--shop">
+        <div class="row shops shops-best d-flex flex-wrap mt-3 mt-md-4 w-100 js--shop">
             <div class="col-12 col-sm-6 col-md-4 col-tb-3 shop-col justify-content-center js--shop-item">
                  {{> promocodes/card-best images="./assets/img/aliexpress.png" title="Купоны AliExpress на скидку от $2 до $5"}}
             </div>
@@ -45,10 +45,11 @@
         <div class="mt-3 mt-md-4 pt-md-1">
             {{> shops/shop-link}}
         </div>
-        <div class="mt-3 mt-md-5">
+        <div class="mt-md-5">
             {{> shops/shop-list}}
         </div>
     </div>
+    {{> app-overlay/overlay}}
 </main>
 
 {{> _layout/footer/footer}}

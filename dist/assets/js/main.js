@@ -10,7 +10,8 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "changeDatalist": function() { return /* binding */ changeDatalist; }
+/* harmony export */   "changeDatalist": function() { return /* binding */ changeDatalist; },
+/* harmony export */   "showSearchMobile": function() { return /* binding */ showSearchMobile; }
 /* harmony export */ });
 /* harmony import */ var _js_clickOutside_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../js/_clickOutside.js */ "./src/js/_clickOutside.js");
 
@@ -241,6 +242,34 @@ var changeDatalist = function changeDatalist() {
     }
   });
 };
+var showSearchMobile = function showSearchMobile() {
+  var btn = document.querySelector('.js--search-mobile');
+  var search = document.querySelector('.js--search');
+  var close = document.querySelector('.js--search-mobile-close');
+  if (!btn || !search) return;
+  btn.addEventListener('click', function () {
+    search.classList.remove('d-none');
+    search.classList.add('header-search-absolute');
+    setTimeout(function () {
+      search.classList.add('header-search-absolute-show');
+    }, 100);
+    setTimeout(function () {
+      search.classList.add('header-search-absolute-visible');
+      btn.classList.add('d-none');
+      close.classList.remove('d-none');
+    }, 600);
+  });
+  close.addEventListener('click', function () {
+    search.classList.remove('header-search-absolute-visible');
+    search.classList.remove('header-search-absolute-show');
+    setTimeout(function () {
+      btn.classList.remove('d-none');
+      close.classList.add('d-none');
+      search.classList.remove('header-search-absolute');
+      search.classList.add('d-none');
+    }, 500);
+  });
+};
 
 
 /***/ }),
@@ -259,9 +288,30 @@ var showModal = function showModal() {
     var overlay = document.querySelector("." + elem.getAttribute('data-show-modal'));
     if (!overlay) return;
     var close = overlay.querySelector('.overlay-close');
-    var card_content = '';
+    var notshow = elem.querySelectorAll('[data-notshow-modal]');
     elem.addEventListener('click', function (e) {
+      var show = 1;
+      notshow.forEach(function (item) {
+        if (e.target == item) {
+          show = 0;
+          return;
+        }
+      });
       e.preventDefault();
+      if (!show) return;
+      if (elem.hasAttribute('data-modal-promo')) {
+        overlay.classList.add('modal-promo');
+        overlay.querySelector('.btn').classList.add('btn-orange');
+        overlay.querySelector('.btn').classList.remove('btn-green');
+        overlay.querySelector('.input-wrapper').classList.add('input-wrapper--orange');
+        overlay.querySelector('.input-wrapper').classList.remove('input-wrapper--green');
+      } else {
+        overlay.classList.remove('modal-promo');
+        overlay.querySelector('.btn').classList.remove('btn-orange');
+        overlay.querySelector('.btn').classList.add('btn-green');
+        overlay.querySelector('.input-wrapper').classList.remove('input-wrapper--orange');
+        overlay.querySelector('.input-wrapper').classList.add('input-wrapper--green');
+      }
       document.documentElement.style.overflowY = 'hidden';
       overlay.style.zIndex = 999;
       elem.disabled = true;
@@ -450,7 +500,7 @@ var changeBottomBorder = function changeBottomBorder(items) {
   items.forEach(function (elem) {
     elem.style.borderBottom = '1px solid #DBDBDB';
   });
-  if (window.innerWidth >= 1280) removeBorder(items, 4);else if (window.innerWidth >= 991) removeBorder(items, 3);else if (window.innerWidth >= 768) removeBorder(items, 2);else removeBorder(items, 1);
+  if (window.innerWidth >= 1280) removeBorder(items, 4);else if (window.innerWidth >= 991) removeBorder(items, 3);else if (window.innerWidth >= 768 || items[0].classList.contains('js--shop-item-2')) removeBorder(items, 2);else removeBorder(items, 1);
 };
 var removeBorder = function removeBorder(items, count) {
   if (items.length % count == 0) for (var i = items.length - 1; i >= items.length - count; i--) {
@@ -10954,6 +11004,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function () {
   (0,_components_scroll_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
   _components_layout_header_header_js__WEBPACK_IMPORTED_MODULE_2__.changeDatalist();
+  _components_layout_header_header_js__WEBPACK_IMPORTED_MODULE_2__.showSearchMobile();
   (0,_components_shops_shop_js__WEBPACK_IMPORTED_MODULE_3__.changeShopBorder)();
   (0,_components_review_review_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_components_app_overlay_overlay_js__WEBPACK_IMPORTED_MODULE_5__["default"])();

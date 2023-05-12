@@ -64,8 +64,8 @@
 
     svg {
         position: absolute;
-        right: -1px;
-        top: -1px;
+        right: -2px;
+        top: -2px;
     }
 
     &:hover {
@@ -114,6 +114,16 @@
         }
     }
 }
+
+.btn-square {
+    border-radius: 5px;
+}
+
+.btn-circle {
+    border-radius: 100px;
+}
+
+
 
     .btn-auto {
         margin: 0 auto;

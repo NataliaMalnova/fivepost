@@ -1,20 +1,98 @@
 .coupons-table {
-  border: 1px solid #DBDBDB;
-  border-radius: 10px;
+  table {
+    border-spacing: 0;
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    border-collapse: separate;
+  }
 
-  &__title {
+  .coupons-table__title.coupons-table--col{
     border-bottom: 1px solid #DBDBDB;
-    padding: 27px 44px;
 
-    @include media-breakpoint-down(md) {
-      padding: 24px;
+    p {
+      text-align: left;
     }
   }
 
-  &__content {
-    padding: 40px 44px;
-    @include media-breakpoint-down(md) {
-      padding: 24px;
+  &--col:nth-child(1) {
+    width: 20%;
+
+    .coupons-table__content {
+      padding: 20px 8px 20px 40px;
+      @include media-breakpoint-down(tb) {
+        padding: 20px 8px 20px 20px;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 12px 8px 12px 12px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 12px 4px;
+      }
+    }
+
+    &.coupons-table__title {
+      p {
+        padding: 27px 40px;
+        @include media-breakpoint-down(tb) {
+          padding: 27px 20px;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 24px 8px 24px 12px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 12px 4px;
+        }
+      }
+    }
+  }
+
+  &--col:nth-child(2) {
+    //width: 50%;
+    .coupons-table__content {
+      padding: 20px 8px 20px 8px;
+      @include media-breakpoint-down(md) {
+        padding: 20px 8px 20px 8px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 12px 4px;
+      }
+    }
+
+    &.coupons-table__title {
+      p {
+        padding: 27px 8px;
+        @include media-breakpoint-down(md) {
+          padding: 24px 8px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 12px 4px;
+        }
+      }
+    }
+  }
+
+  &--col:nth-child(3) {
+    width: 25%;
+
+    .coupons-table__content {
+      padding: 20px 8px 20px 8px;
+      @include media-breakpoint-down(md) {
+        padding: 20px 8px 20px 8px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 12px 4px;
+      }
+    }
+    &.coupons-table__title {
+      p {
+        padding: 27px 8px;
+        @include media-breakpoint-down(md) {
+          padding: 24px 8px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 12px 4px;
+        }
+      }
     }
   }
 }

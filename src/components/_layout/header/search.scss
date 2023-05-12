@@ -1,6 +1,10 @@
 .header-input {
   width: 100%;
 
+  @include media-breakpoint-up(sm) {
+    width: 400px;
+  }
+
   @include media-breakpoint-up(md) {
     width: 580px;
   }
@@ -18,12 +22,19 @@
   }
 
   input {
-    padding: 15px 100px 15px 47px;
+    height: 46px;
+    padding: 15px 60px 15px 47px;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      padding: 15px 60px 15px 15px;
+    }
   }
 
   .btn {
-    position: absolute;
-    right: 0;
+    margin-left: -40px;
+    z-index: 2;
+    height: 46px;
   }
 }
 

@@ -10,15 +10,41 @@ const showModal = () => {
         if(!overlay) return
 
         const close = overlay.querySelector('.overlay-close')
-        let card_content = ''
+
+        const notshow = elem.querySelectorAll('[data-notshow-modal]');
+
+
 
         elem.addEventListener('click', function(e) {
+            let show = 1;
+            notshow.forEach(item => {
+                if (e.target == item) {
+                    show = 0;
+                    return;
+                }
+            })
 
-            e.preventDefault()
+            e.preventDefault();
+            if(!show) return;
+
+            if(elem.hasAttribute('data-modal-promo')) {
+                overlay.classList.add('modal-promo');
+                overlay.querySelector('.btn').classList.add('btn-orange');
+                overlay.querySelector('.btn').classList.remove('btn-green');
+                overlay.querySelector('.input-wrapper').classList.add('input-wrapper--orange');
+                overlay.querySelector('.input-wrapper').classList.remove('input-wrapper--green');
+            } else {
+                overlay.classList.remove('modal-promo');
+                overlay.querySelector('.btn').classList.remove('btn-orange');
+                overlay.querySelector('.btn').classList.add('btn-green');
+                overlay.querySelector('.input-wrapper').classList.remove('input-wrapper--orange');
+                overlay.querySelector('.input-wrapper').classList.add('input-wrapper--green');
+            }
             document.documentElement.style.overflowY = 'hidden';
 
-            overlay.style.zIndex = 999
-            elem.disabled = true
+            overlay.style.zIndex = 999;
+            elem.disabled = true;
+
             setTimeout(() => {
                 overlay.classList.add('overlay-show')
                 elem.disabled = false

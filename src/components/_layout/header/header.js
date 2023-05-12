@@ -243,11 +243,43 @@ const changeDatalist = () => {
             }
         }
     })
+}
 
+const showSearchMobile = () => {
+    const btn = document.querySelector('.js--search-mobile');
+    const search = document.querySelector('.js--search');
+    const close = document.querySelector('.js--search-mobile-close');
 
+    if(!btn || !search) return;
 
+    btn.addEventListener('click', () => {
+        search.classList.remove('d-none')
+        search.classList.add('header-search-absolute');
+
+        setTimeout(() => {
+            search.classList.add('header-search-absolute-show');
+        }, 100);
+        setTimeout(() => {
+            search.classList.add('header-search-absolute-visible');
+            btn.classList.add('d-none');
+            close.classList.remove('d-none');
+        }, 600);
+    });
+
+    close.addEventListener('click', () => {
+        search.classList.remove('header-search-absolute-visible');
+        search.classList.remove('header-search-absolute-show');
+
+        setTimeout(() => {
+            btn.classList.remove('d-none');
+            close.classList.add('d-none');
+            search.classList.remove('header-search-absolute');
+            search.classList.add('d-none')
+        }, 500);
+    });
 }
 
 export {
-    changeDatalist
+    changeDatalist,
+    showSearchMobile
 }

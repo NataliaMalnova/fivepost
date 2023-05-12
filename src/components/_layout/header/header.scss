@@ -5,6 +5,10 @@ header {
 
   nav {
     height: 46px;
+
+    @include media-breakpoint-only(xs) {
+      height: 25px;
+    }
      a {
        position: relative;
       &.active {
@@ -19,12 +23,64 @@ header {
           background: var(--color-green);
           border-radius: 20px 20px 0px 0px;
 
+          @include media-breakpoint-only(xs) {
+            width: calc(100% + 4px);
+            left: -2px;
+            height: 2px;
+          }
+
           @include media-breakpoint-up(md) {
             top: calc(100% + 13px);
           }
         }
       }
     }
+  }
+}
+
+.header-logo {
+  margin-top: 10px;
+  @include media-breakpoint-only(xs) {
+    width: 70px;
+  }
+
+  svg {
+    width: 100%;
+  }
+}
+
+.header-search--mobile {
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.header-search-absolute {
+
+  @include media-breakpoint-between(xs, sm) {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 0%;
+    z-index: 7;
+    transition: .5s;
+    overflow: hidden;
+  }
+}
+.header-search-absolute-show {
+  @include media-breakpoint-between(xs, sm) {
+    width: calc(100% - 65px);
+  }
+}
+
+.header-search-absolute-visible {
+  @include media-breakpoint-between(xs, sm) {
+    overflow: visible;
   }
 }
 
