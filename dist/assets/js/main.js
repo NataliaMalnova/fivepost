@@ -500,7 +500,7 @@ var changeBottomBorder = function changeBottomBorder(items) {
   items.forEach(function (elem) {
     elem.style.borderBottom = '1px solid #DBDBDB';
   });
-  if (window.innerWidth >= 1280) removeBorder(items, 4);else if (window.innerWidth >= 991) removeBorder(items, 3);else if (window.innerWidth >= 768 || items[0].classList.contains('js--shop-item-2')) removeBorder(items, 2);else removeBorder(items, 1);
+  if (window.innerWidth >= 1280) removeBorder(items, 4);else if (window.innerWidth >= 991) removeBorder(items, 3);else removeBorder(items, 2);
 };
 var removeBorder = function removeBorder(items, count) {
   if (items.length % count == 0) for (var i = items.length - 1; i >= items.length - count; i--) {
@@ -555,10 +555,11 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 var scrolling = function scrolling() {
-  var links = document.querySelectorAll('[href^="#"]'),
-    speed = 0.2;
+  var links = document.querySelectorAll('[href^="#"]');
   if (links.length == 0) return;
   links.forEach(function (link) {
+    var speed = 0.2;
+    if (link.hasAttribute('data-scroll-time')) speed = link.getAttribute('data-scroll-time');
     link.addEventListener('click', function (event) {
       event.preventDefault();
       var widthTop = document.documentElement.scrollTop - 30;

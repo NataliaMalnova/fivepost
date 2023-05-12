@@ -5,13 +5,14 @@
  */
 
 const scrolling = () => {
-    let links = document.querySelectorAll('[href^="#"]'),
-        speed = 0.2;
+    let links = document.querySelectorAll('[href^="#"]');
 
-        if(links.length == 0) return;
-
+    if(links.length == 0) return;
 
     links.forEach(link => {
+        let speed = 0.2;
+        if(link.hasAttribute('data-scroll-time')) speed = link.getAttribute('data-scroll-time');
+
         link.addEventListener('click', function (event) {
             event.preventDefault();
 

@@ -211,9 +211,37 @@
       }
     }
 
-
     .best-card__image {
-      height: 72px;
+      height: 55px;
+      @include media-breakpoint-up(md) {
+        height: 72px;
+      }
+    }
+
+    .promocode-card__button {
+      @include media-breakpoint-only(xs) {
+        width: 100%;
+       max-width: 212px;
+      }
+    }
+
+    p {
+      @include media-breakpoint-only(xs) {
+        font-size: 13px;
+        line-height: 130%;
+        font-weight: $font-weight;
+      }
+    }
+
+    .btn {
+      @include media-breakpoint-only(xs) {
+        min-height: 40px;
+        min-width: auto;
+        width: 100%;
+        padding: 0;
+        border-radius: 5px;
+      }
+
     }
   }
 }

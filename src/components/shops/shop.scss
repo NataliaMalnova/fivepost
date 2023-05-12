@@ -70,12 +70,6 @@
   }
 }
 
-.shops-best .shop-col:not(:nth-child(2n)) {
-  @include media-breakpoint-only(xs) {
-    border-right: none;
-  }
-}
-
 .shop-tem__title {
   text-transform: uppercase;
 }
