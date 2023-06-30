@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     scrolling();
     header.changeDatalist();
     header.showSearchMobile();
+    header.closeSearchList();
     changeShopBorder();
     changeReview();
     showModal();

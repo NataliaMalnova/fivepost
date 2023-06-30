@@ -1,5 +1,5 @@
 const changeShopBorder = () => {
-    const shops = document.querySelectorAll('.shops');
+    const shops = document.querySelectorAll('.js--shop');
 
     if(shops.length == 0) return;
 

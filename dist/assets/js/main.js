@@ -11,6 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "changeDatalist": function() { return /* binding */ changeDatalist; },
+/* harmony export */   "closeSearchList": function() { return /* binding */ closeSearchList; },
 /* harmony export */   "showSearchMobile": function() { return /* binding */ showSearchMobile; }
 /* harmony export */ });
 /* harmony import */ var _js_clickOutside_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../js/_clickOutside.js */ "./src/js/_clickOutside.js");
@@ -239,6 +240,15 @@ var changeDatalist = function changeDatalist() {
           }
           break;
       }
+    }
+  });
+};
+var closeSearchList = function closeSearchList() {
+  var search = document.querySelector('.input-datalist__list .search-result');
+  if (!search) return;
+  document.addEventListener('click', function (e) {
+    if (!search.classList.contains('open')) return;else {
+      search.classList.remove('open');
     }
   });
 };
@@ -485,7 +495,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "changeShopBorder": function() { return /* binding */ changeShopBorder; }
 /* harmony export */ });
 var changeShopBorder = function changeShopBorder() {
-  var shops = document.querySelectorAll('.shops');
+  var shops = document.querySelectorAll('.js--shop');
   if (shops.length == 0) return;
   shops.forEach(function (elem) {
     var items = elem.querySelectorAll('.js--shop-item');
@@ -11006,6 +11016,7 @@ window.addEventListener('load', function () {
   (0,_components_scroll_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
   _components_layout_header_header_js__WEBPACK_IMPORTED_MODULE_2__.changeDatalist();
   _components_layout_header_header_js__WEBPACK_IMPORTED_MODULE_2__.showSearchMobile();
+  _components_layout_header_header_js__WEBPACK_IMPORTED_MODULE_2__.closeSearchList();
   (0,_components_shops_shop_js__WEBPACK_IMPORTED_MODULE_3__.changeShopBorder)();
   (0,_components_review_review_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_components_app_overlay_overlay_js__WEBPACK_IMPORTED_MODULE_5__["default"])();

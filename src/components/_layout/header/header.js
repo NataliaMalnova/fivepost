@@ -245,6 +245,22 @@ const changeDatalist = () => {
     })
 }
 
+const closeSearchList = () => {
+    const search = document.querySelector('.input-datalist__list .search-result');
+
+    if(!search) return;
+
+
+    document.addEventListener('click', function(e) {
+        if (!search.classList.contains('open')) return;
+        else {
+            search.classList.remove('open')
+        }
+
+
+    })
+}
+
 const showSearchMobile = () => {
     const btn = document.querySelector('.js--search-mobile');
     const search = document.querySelector('.js--search');
@@ -281,5 +297,6 @@ const showSearchMobile = () => {
 
 export {
     changeDatalist,
-    showSearchMobile
+    showSearchMobile,
+    closeSearchList
 }

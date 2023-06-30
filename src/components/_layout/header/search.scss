@@ -58,3 +58,28 @@
     }
   }
 }
+
+.search-result {
+
+  flex-direction: column;
+  padding: 10px 0;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  display: none;
+
+  &.open {
+    display: flex;
+  }
+}
+
+.search-result-item {
+  display: flex;
+  padding: 12px 24px;
+  align-items: center;
+
+  img {
+    max-width: 100px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
